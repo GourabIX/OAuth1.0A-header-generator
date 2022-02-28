@@ -30,6 +30,11 @@ public final class AppConstants {
 	public static final String PERCENT7E_LITERAL = "%7E";
 	public static final String PERCENT7E_PE_REPLACEMENT = "~";
 
+	public static final String VAR_CONSUMER_KEY = "consumerKey";
+	public static final String VAR_CONSUMER_SECRET = "consumerSecret";
+	public static final String VAR_HTTP_METHOD = "httpMethod";
+	public static final String VAR_PROTECTED_URL = "url";
+
 	private AppConstants() {
 		// Constructor made private so this class cannot be instantiated.
 	}
