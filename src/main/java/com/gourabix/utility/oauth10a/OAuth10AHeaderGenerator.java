@@ -69,7 +69,7 @@ public class OAuth10AHeaderGenerator {
 		base.deleteCharAt(base.length() - 1);
 
 		System.out.println(
-				"OAuth 1.0A header generated successfully. Paste the contents with the header key as 'Authorization'.");
+				"OAuth 1.0A header generated successfully. Paste the contents below with the header key as 'Authorization'.");
 		return base.toString();
 	}
 

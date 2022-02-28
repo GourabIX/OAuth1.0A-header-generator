@@ -23,7 +23,10 @@ public class OAuthHeaderGeneratorApp {
 
 		OAuth10AHeaderGenerator oAuth10AHeaderGenerator = new OAuth10AHeaderGenerator(consumerKey, consumerSecret);
 		String authHeader = oAuth10AHeaderGenerator.generateHeader(httpMethod, protectedUrl, new HashMap<>());
+
+		System.out.println("\n--------------------------------------");
 		System.out.println(authHeader);
+		System.out.println("--------------------------------------\n");
 	}
 
 }
