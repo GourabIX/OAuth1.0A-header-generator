@@ -10,7 +10,7 @@ import com.gourabix.utility.oauth10a.OAuth10AHeaderGenerator;
 /**
  * The entrypoint for the OAuthHeaderGeneratorApp.
  * 
- * @author gourab
+ * @author Gourab Sarkar
  *
  */
 public class OAuthHeaderGeneratorApp {

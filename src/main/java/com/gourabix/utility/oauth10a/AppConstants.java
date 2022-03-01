@@ -3,7 +3,7 @@ package com.gourabix.utility.oauth10a;
 /**
  * The final class housing constants used in the application.
  * 
- * @author gourab
+ * @author Gourab Sarkar
  *
  */
 public final class AppConstants {

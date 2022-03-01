@@ -20,7 +20,7 @@ import javax.crypto.spec.SecretKeySpec;
  * The utility class to generate OAuth authorization header contents. This
  * authorization header conforms to OAuth 1.0A specification.
  * 
- * @author gourab
+ * @author Gourab Sarkar
  */
 public class OAuth10AHeaderGenerator {
 
