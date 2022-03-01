@@ -6,13 +6,13 @@ This project has *no dependencies* and is designed to be a simple, portable and 
 
 ### Usage
 
-Build the executable JAR.
+1. Build the executable JAR.
 
 ```
 mvn clean package
 ```
 
-Specify arguments and execute.
+2. Specify arguments and execute.
 
 ```
 java -DconsumerKey="your-consumer-key" -DconsumerSecret="YourConsumerSecret" -DhttpMethod="HTTP_METHOD" -Durl="https://protected.url/here" -jar target/oauth10a-header-generator-1.0.jar
@@ -20,7 +20,7 @@ java -DconsumerKey="your-consumer-key" -DconsumerSecret="YourConsumerSecret" -Dh
 
 That's it! The OAuth 1.0A header is generated.
 
-This header can be directly used with any HTTP client (such as Spring's built-in REST template) to access an OAuth 1.0 protected resource by setting the header key as `Authorization` and its value as the output obtained in the HTTP request.
+This header can be directly used with any HTTP client (such as Spring's built-in REST template) to access an OAuth 1.0 protected resource by setting the header key as `Authorization` and its value as the output obtained in step 2.
 
 ### Support this project
 
