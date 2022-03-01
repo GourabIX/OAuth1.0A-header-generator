@@ -8,8 +8,7 @@
 	<version>1.0</version>
 
 	<name>oauth10a-header-generator</name>
-	<!-- FIXME change it to the project's website -->
-	<url>http://www.example.com</url>
+	<url>https://github.com/GourabIX/OAuth1.0A-header-generator</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
