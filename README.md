@@ -24,7 +24,7 @@ This header can be directly used with any HTTP client (such as Spring's built-in
 
 ### Docker
 
-This project is available as an image on DockerHub at [https://hub.docker.com/r/gourabix/oauth-header-generator](ttps://hub.docker.com/r/gourabix/oauth-header-generator).
+This project is available as an image on DockerHub at [https://hub.docker.com/r/gourabix/oauth-header-generator](https://hub.docker.com/r/gourabix/oauth-header-generator).
 
 To run the image as a container, use the following command:
 
