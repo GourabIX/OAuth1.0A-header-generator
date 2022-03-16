@@ -21,6 +21,13 @@ public class OAuthHeaderGeneratorApp {
 		final String httpMethod = System.getProperty(AppConstants.VAR_HTTP_METHOD);
 		final String protectedUrl = System.getProperty(AppConstants.VAR_PROTECTED_URL);
 
+		System.out.println("Generating OAuth header for the following payload:");
+		System.out.println("Consumer key: " + consumerKey);
+		System.out.println("Consumer secret: " + consumerSecret);
+		System.out.println("HTTP method: " + httpMethod);
+		System.out.println("URL: " + protectedUrl);
+		System.out.println();
+
 		OAuth10AHeaderGenerator oAuth10AHeaderGenerator = new OAuth10AHeaderGenerator(consumerKey, consumerSecret);
 		String authHeader = oAuth10AHeaderGenerator.generateHeader(httpMethod, protectedUrl, new HashMap<>());
 
