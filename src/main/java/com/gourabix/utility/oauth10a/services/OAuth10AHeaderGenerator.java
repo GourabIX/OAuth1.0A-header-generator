@@ -17,6 +17,7 @@ import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
 
 import com.gourabix.utility.oauth10a.common.AppConstants;
+import com.gourabix.utility.oauth10a.exceptions.InvalidOAuthConsumerCredentialsException;
 
 /**
  * The utility class to generate OAuth authorization header contents. This
@@ -39,6 +40,28 @@ public class OAuth10AHeaderGenerator {
 		this.consumerSecret = consumerSecret;
 		this.signatureMethod = AppConstants.OAUTH_SIGNATURE_ALG_HEADER;
 		this.oauthVersion = AppConstants.OAUTH_VER_HEADER;
+
+		validateOAuthCredentials(this.consumerKey, this.consumerSecret);
+	}
+
+	/**
+	 * Validates the specified OAuth consumer credentials.
+	 * 
+	 * @implNote Validation does not check whether an OAuth credential has expired
+	 *           or not. It simply ensures that null or empty values are not passed.
+	 * @param consumerKey
+	 * @param consumerSecret
+	 * @throws InvalidOAuthConsumerCredentialsException
+	 */
+	public void validateOAuthCredentials(String consumerKey, String consumerSecret)
+			throws InvalidOAuthConsumerCredentialsException {
+		if (consumerKey == null || consumerKey.isEmpty() || consumerSecret == null || consumerSecret.isEmpty()) {
+			System.err.println("The consumer key or the consumer secret is invalid. Supplied consumer key: "
+					+ consumerKey + ", supplied consumer secret: " + consumerKey + ".\n");
+			throw new InvalidOAuthConsumerCredentialsException("The consumer key or the consumer secret is invalid.");
+		}
+
+		System.out.println("The specified OAuth credentials have been validated successfully.");
 	}
 
 	/**
