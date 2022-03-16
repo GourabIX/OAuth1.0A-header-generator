@@ -1,4 +1,4 @@
-package com.gourabix.utility.oauth10a;
+package com.gourabix.utility.oauth10a.services;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
@@ -15,6 +15,8 @@ import java.util.stream.Collectors;
 import javax.crypto.Mac;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
+
+import com.gourabix.utility.oauth10a.common.AppConstants;
 
 /**
  * The utility class to generate OAuth authorization header contents. This

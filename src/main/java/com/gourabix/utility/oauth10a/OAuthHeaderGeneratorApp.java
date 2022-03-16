@@ -1,11 +1,11 @@
-package com.gourabix.utility;
+package com.gourabix.utility.oauth10a;
 
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 
-import com.gourabix.utility.oauth10a.AppConstants;
-import com.gourabix.utility.oauth10a.OAuth10AHeaderGenerator;
+import com.gourabix.utility.oauth10a.common.AppConstants;
+import com.gourabix.utility.oauth10a.services.OAuth10AHeaderGenerator;
 
 /**
  * The entrypoint for the OAuthHeaderGeneratorApp.

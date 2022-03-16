@@ -1,4 +1,4 @@
-package com.gourabix.utility.oauth10a;
+package com.gourabix.utility.oauth10a.common;
 
 /**
  * The final class housing constants used in the application.
