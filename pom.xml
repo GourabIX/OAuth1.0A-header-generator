@@ -55,7 +55,7 @@
 							<manifest>
 								<addClasspath>true</addClasspath>
 								<classpathPrefix>libs/</classpathPrefix>
-								<mainClass>com.gourabix.utility.OAuthHeaderGeneratorApp</mainClass>
+								<mainClass>com.gourabix.utility.oauth10a.OAuthHeaderGeneratorApp</mainClass>
 							</manifest>
 						</archive>
 					</configuration>
