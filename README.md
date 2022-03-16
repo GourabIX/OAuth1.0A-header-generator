@@ -22,6 +22,18 @@ That's it! The OAuth 1.0A header is generated.
 
 This header can be directly used with any HTTP client (such as Spring's built-in REST template) to access an OAuth 1.0 protected resource by setting the header key as `Authorization` and its value as the output obtained in step 2.
 
+### Docker
+
+This project is available as an image on DockerHub at [https://hub.docker.com/r/gourabix/oauth-header-generator](ttps://hub.docker.com/r/gourabix/oauth-header-generator).
+
+To run the image as a container, use the following command:
+
+```
+docker container run -e CONSUMER_KEY="your-consumer-key" -e CONSUMER_SECRET="YourConsumerSecret" -e HTTP_METHOD="POST" -e URL="https://protected.url/here" gourabix/oauth-header-generator:1.1
+```
+
+Note that the consumer key, consumer secret, HTTP method and URL are specified as environment variables in the command above. When they are not provided, default values are used instead.
+
 ### Support this project
 
 Found an issue? Head over to the issues tab and create a new issue.
