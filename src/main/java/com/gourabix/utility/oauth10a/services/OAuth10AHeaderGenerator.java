@@ -5,11 +5,11 @@ import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
-import java.security.SecureRandom;
 import java.util.Base64;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Random;
 import java.util.stream.Collectors;
 
 import javax.crypto.Mac;
@@ -34,6 +34,8 @@ public class OAuth10AHeaderGenerator {
 	private final String signatureMethod;
 
 	private final String oauthVersion;
+
+	private static final Random RANDOM = new Random();
 
 	public OAuth10AHeaderGenerator(String consumerKey, String consumerSecret) {
 		this.consumerKey = consumerKey;
@@ -213,10 +215,11 @@ public class OAuth10AHeaderGenerator {
 	 * Generates the "NONCE" attribute for the OAuth 1.0A header.
 	 * 
 	 * @return String
-	 * @throws NoSuchAlgorithmException
 	 */
-	private String getNonce() throws NoSuchAlgorithmException {
-		return SecureRandom.getInstanceStrong().nextInt() + getTimestamp();
+	private String getNonce() {
+		// Returns an alphanumeric pseudorandom string.
+		return RANDOM.ints(48, 123).filter(i -> (i <= 57 || i >= 65) && (i <= 90 || i >= 97)).limit(10)
+				.collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append).toString();
 	}
 
 	/**
