@@ -15,7 +15,7 @@ mvn clean package
 2. Specify arguments and execute.
 
 ```
-java -DconsumerKey="your-consumer-key" -DconsumerSecret="YourConsumerSecret" -DhttpMethod="HTTP_METHOD" -Durl="https://protected.url/here" -jar target/oauth10a-header-generator-1.0.jar
+java -DconsumerKey="your-consumer-key" -DconsumerSecret="YourConsumerSecret" -DhttpMethod="HTTP_METHOD" -Durl="https://protected.url/here" -jar target/oauth10a-header-generator-1.1.jar
 ```
 
 That's it! The OAuth 1.0A header is generated.

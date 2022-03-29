@@ -5,7 +5,7 @@
 
 	<groupId>com.gourabix.utility</groupId>
 	<artifactId>oauth10a-header-generator</artifactId>
-	<version>1.0</version>
+	<version>1.1</version>
 
 	<name>oauth10a-header-generator</name>
 	<url>https://github.com/GourabIX/OAuth1.0A-header-generator</url>
